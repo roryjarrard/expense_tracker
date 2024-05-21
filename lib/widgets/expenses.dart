@@ -35,7 +35,10 @@ class _ExpensesState extends State<Expenses> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Expense Tracker'),
+        foregroundColor: Theme.of(context).cardColor,
+        backgroundColor: Theme.of(context).primaryColor,
+        title: const Text('Flutter Expense Tracker',
+            style: TextStyle(color: Colors.white)),
         actions: [
           IconButton(
             onPressed: _openAddExppenseOverlay,
