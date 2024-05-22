@@ -26,9 +26,19 @@ class _ExpensesState extends State<Expenses> {
     ),
   ];
 
-  void _openAddExppenseOverlay() {
+  void _openAddExpenseOverlay() {
     showModalBottomSheet(
-        context: context, builder: (ctx) => const NewExpense());
+      context: context,
+      builder: (ctx) => NewExpense(
+        onAddExpense: _addExpense,
+      ),
+    );
+  }
+
+  void _addExpense(Expense expense) {
+    setState(() {
+      _registeredExpenses.add(expense);
+    });
   }
 
   @override
@@ -41,7 +51,7 @@ class _ExpensesState extends State<Expenses> {
             style: TextStyle(color: Colors.white)),
         actions: [
           IconButton(
-            onPressed: _openAddExppenseOverlay,
+            onPressed: _openAddExpenseOverlay,
             icon: const Icon(Icons.add),
           ),
         ],
