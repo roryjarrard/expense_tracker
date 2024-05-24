@@ -81,8 +81,8 @@ class _ExpensesState extends State<Expenses> {
 
     return Scaffold(
       appBar: AppBar(
-        foregroundColor: Theme.of(context).cardColor,
-        backgroundColor: Theme.of(context).primaryColor,
+        // foregroundColor: Theme.of(context).cardColor,
+        // backgroundColor: Theme.of(context).primaryColor,
         title: const Text('Flutter Expense Tracker',
             style: TextStyle(color: Colors.white)),
         actions: [
